@@ -15,7 +15,7 @@ class Clouds:
     def __init__(self,cloud_images,count=16):
         self.clouds=[]
         for i in range (count):
-            self.clouds.append(Cloud((random.random()*99999,random.random()*99999),random.choice(cloud_images),random.random()*0.05+0.05,random.random()*0.6+0.2))
+            self.clouds.append(Cloud((random.random()*99999,random.random()*99999),random.choice(cloud_images),random.random()*0.005+0.005,random.random()*0.6+0.2))
             self.clouds.sort(key=lambda x:x.depth) #sort function takes argument as key and key function just do whatever it is commanded to on every element and then sort function takes this as consideration whatever key function returns to sort the list
     def update(self):
         for cloud in self.clouds:
