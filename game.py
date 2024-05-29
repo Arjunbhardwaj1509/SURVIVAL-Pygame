@@ -16,7 +16,7 @@ class Game:
         pygame.init()
 
         pygame.display.set_caption('ninja game')
-        self.screen = pygame.display.set_mode((640, 480))
+        self.screen = pygame.display.set_mode((1200, 800))
         self.display = pygame.Surface((320, 240))
 
         self.clock = pygame.time.Clock()
@@ -101,7 +101,7 @@ class Game:
             if not len(self.enemies):
                 self.transition+=1
                 if self.transition>30:
-                    self.level=min(self.level+1,len(os.listdir('data/maps')-1))
+                    self.level=min(self.level+1,len(os.listdir('data/maps')))
                     self.load_level(self.level)
             if self.transition<=0:
                 self.transition+=1
